@@ -1,26 +1,20 @@
-var student = {
-    "name" : "Atishay",
-    "Roll ME" : 200110022,
-    "subject" : "meta",
-};
+function freezObj(){
+    "use strict";
+    const MATHS_CONSTANT = {
+        "PI" : 3.14
+    };
 
-var employee = {
-    "name" : "radha",
-    "income" : 0,
-     12 : "baby",
-};
+    // Object.freeze(MATHS_CONSTANT)
 
-function checkmethod(check){
-    if(employee.hasOwnProperty(check)){
-        return true;
+    try{
+        MATHS_CONSTANT.EXP=99
     }
-    return false;
+    catch(ex){
+        console.log("ex");
+    }
+    return MATHS_CONSTANT.PI
 }
-employee.age=4
-delete employee.age
-console.log(checkmethod("name"))
-console.log(employee.age)
-console.log(student["Roll ME"])
-console.log(employee[12])
-console.log("A")
+
+
+console.log(freezObj())
 
